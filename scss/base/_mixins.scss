@@ -1,0 +1,64 @@
+@use 'var' as v;
+
+//mensajes de error o avisos
+@mixin mensajes($color, $colorClaro) {
+  padding: 2.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: $colorClaro;
+  color: $color;
+  border-radius: 1rem;
+  border: 0.2rem $color;
+  border-style: dashed solid;
+}
+
+//seccion selects
+@mixin selects {
+  text-align: center;
+  font-size: 1.5rem;
+  appearance: none;
+  &:focus,
+  &:hover{
+    outline: none;
+    border: 0.1rem solid v.$azul;
+  }
+  option{
+    background-color: v.$negro;
+    color: v.$blanco;
+    font-size: 1.5rem;
+  }
+}
+
+//seccion botones
+@mixin botones{
+ padding: 1.3rem 3rem;
+ font-size: 1.2rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ letter-spacing: 0.25rem;
+ background-color: v.$blanco;
+ color: v.$negro;
+ border: none;
+ cursor: pointer;
+ border-radius: 4.5rem;
+ box-shadow: 0rem 0.8rem 1.5rem v.$negroShadow;
+ transition: all .3s ease 0s;
+ outline: none;
+ &:hover{
+  background-color: v.$azul;
+  box-shadow: 0rem 1.5rem 2rem v.$otroAzul;
+  color: v.$blanco;
+  transform: translateY(-0.7rem);
+ }
+ &:active{
+  transform: translateY(-1px);
+ }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}

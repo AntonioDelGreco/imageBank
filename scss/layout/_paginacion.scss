@@ -1,0 +1,12 @@
+@use '../base/mixins' as m; 
+
+.paginacion{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  a{
+    @include m.botones;
+    margin: 2rem 1rem;
+  }
+}

@@ -1,0 +1,39 @@
+@use 'var' as v;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*, 
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+  background-color: v.$menosBlanco;
+  font-family: v.$fuente;
+}
+.contenedor {
+  border-top: 2px solid v.$azul;
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+h1{
+  margin: 0 0 5rem 0;
+  font-size: 4rem;
+  color: v.$negro;
+}
+img {
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+}

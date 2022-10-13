@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="./css/styles.css" as="style">
+  <link rel="stylesheet" href="./css/styles.css" as="styles">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <title>imgBank</title>
+</head>
+<body> 
+
+  <header class="display-header">
+
+    <h1>imgBank | Antonio Del Greco</h1>
+
+    <a href="https://pixabay.com" target="_blank" rel="noopener noreferrer"><img src="./img/logo.webp" alt="logo pixabay"></a>
+
+  </header>
+
+  <main class="contenedor">
+
+      <form id="form">
+        <div class="formulario">
+          <label class="titulo-buscar" for="buscador">Imagenes a buscar:</label>
+
+            <select class="select1" name="imgTipo" id="imgTipo">
+              <option value="all" selected disabled>Seleccione un Tipo de imagen</option>
+              <option value="all">Todas</option>
+              <option value="photo">Fotos</option>
+              <option value="illustration">Ilustracion</option>
+              <option value="vector">Vector</option>
+            </select> 
+            <select class="select2" name="orientacion" id="orientacion">
+              <option value="all" selected disabled>Orientacion de la imagen</option>
+              <option value="all">Todas</option>
+              <option value="horizontal">Horizontal</option>
+              <option value="vertical">Vertical</option>
+            </select>
+  
+            <input class="barra-buscar" id="termino" type="text" autofocus placeholder="Busqueda. Ejemplo: Café, Futbol, fruta">
+            <button class="boton-buscar boton" id="buscar">Buscar imagenes</button>
+  
+            <button class="micro boton" id="microfono">Voz</button>
+            <button class="boton-resetear boton" id="resetear">Resetear busqueda</button>
+        </div>
+
+      </form>
+      
+      <div class="display-pics" id="allPics"></div>
+      <div class="paginacion" id="paginacion"></div>
+  </main>
+
+  <script src="./js/js.js"></script>
+</body>
+</html>

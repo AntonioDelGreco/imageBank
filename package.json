@@ -1,0 +1,18 @@
+{
+  "name": "gestorimagenes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "plugins": [
+    "jsdom-quokka-plugin"
+  ],
+  "scripts": {
+    "sass": "sass --watch scss/main.scss:css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

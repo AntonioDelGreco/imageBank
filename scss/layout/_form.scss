@@ -1,0 +1,86 @@
+@use '../base/var' as v;
+@use '../base/mixins' as m; 
+
+.formulario{
+  //seccion layout
+  display: flex;
+  flex-flow: column wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+
+  .titulo-buscar{
+    grid-area: tittle;
+    text-align: center;
+    font-size: 5rem;
+  }
+  .select1{
+    border: 1px solid v.$negro;
+    border-radius: 1rem;
+    grid-area: select1;
+    border: none;
+  }
+  .select2{
+    border: 1px solid v.$negro;
+    border-radius: 1rem;
+    grid-area: select2;
+    border: none;
+  }
+  .barra-buscar{
+    grid-area: barra;
+  }
+  .boton-buscar{
+    border: 1px solid v.$negro;
+    border-radius: 1rem;
+    grid-area: botonB;
+  }
+  .micro{
+    border: 1px solid v.$negro;
+    border-radius: 1rem;
+    grid-area: micro;
+  }
+  .boton-resetear{
+    border: 1px solid v.$negro;
+    border-radius: 1rem;
+    grid-area: botonR;
+  }
+  @include m.tablet{
+      display: grid;
+      margin: 3rem 0;
+      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas: 
+        "tittle tittle tittle tittle"
+        "select1 select1 select2 select2"
+        "barra barra barra botonB"
+        "micro micro botonR botonR";
+  }
+
+  .boton{
+    @include m.botones;
+  }
+  .select1{
+    @include m.selects;
+  }
+  .select2{
+    @include m.selects;
+  }
+  .barra-buscar{
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: v.$blanco;
+    transition: 0.3s;
+    &:hover{
+      outline-color: v.$menosBlanco;
+      background: v.$menosBlanco;
+      transition: 0.3s;
+    }
+  }
+}
+.escucha{
+  @include m.mensajes(v.$verde, v.$verdeClaro);
+}
+.error{
+  @include m.mensajes(v.$rojo, v.$rojoClaro)
+}
